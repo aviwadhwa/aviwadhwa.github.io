@@ -65,9 +65,13 @@
     .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
     h2 { font-family: var(--serif); font-size: 38px; line-height: 1.2; font-weight: 400; letter-spacing: -.025em; }
     .section-note { font-size: 14px; color: var(--muted); }
-    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--pale); border: 1px solid var(--line); border-radius: 5px; }
+    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 5px; }
     .research-item { padding: 32px 34px 34px; }
     .research-item + .research-item { border-left: 1px solid var(--line); }
+    .research-graphic { display: block; width: 100%; max-width: 400px; height: auto; margin: 0 auto 27px; overflow: visible; }
+    .research-graphic text { font-family: var(--sans); }
+    .research-graphic .graphic-label { fill: #617b93; font-size: 12px; letter-spacing: .08em; }
+    .research-graphic .graphic-math { fill: #526f8b; font-family: var(--serif); font-size: 17px; font-style: italic; }
     .research-number { color: #5d7b98; font-family: var(--serif); font-size: 15px; }
     h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.3; letter-spacing: -.012em; }
     .research-item h3 { margin-top: 15px; max-width: 360px; }
@@ -150,6 +154,7 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="paintings.html">Paintings</a>
       </nav>
     </div>
   </header>
@@ -214,6 +219,34 @@
       </div>
       <div class="research-grid">
         <article class="research-item">
+          <!-- Self-contained vector illustration: a binary in the AdS bulk and its CFT boundary. -->
+          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" fill="none" role="img" aria-labelledby="binary-graphic-title binary-graphic-description" focusable="false">
+            <title id="binary-graphic-title">Binary dynamics and holography</title>
+            <desc id="binary-graphic-description">Two bodies orbit in a schematic AdS cylinder. Gentle wavefronts extend towards its boundary, labelled CFT, with the bulk energy and boundary scaling dimension linked below.</desc>
+            <g stroke="#cedbe6" stroke-width="1.2" stroke-linecap="round">
+              <path d="M108 166 C108 152.7 158.1 142 220 142 C281.9 142 332 152.7 332 166" stroke-dasharray="3 6"/>
+              <path d="M164 22 C151 67 151 139 164 187"/>
+              <path d="M276 22 C289 67 289 139 276 187"/>
+            </g>
+            <g stroke="#9eb5c9" stroke-width="1.35">
+              <ellipse cx="220" cy="43" rx="112" ry="24"/>
+              <path d="M108 43 V166 C108 179.3 158.1 190 220 190 C281.9 190 332 179.3 332 166 V43"/>
+            </g>
+            <g transform="rotate(-17 220 111)" stroke-linecap="round">
+              <g stroke="#c6d6e4" stroke-width="1.2">
+                <path d="M144 111 A76 30 0 0 1 202 82 M238 82 A76 30 0 0 1 296 111 M296 111 A76 30 0 0 1 238 140 M202 140 A76 30 0 0 1 144 111"/>
+                <path d="M125 111 A95 39 0 0 1 194 74 M246 74 A95 39 0 0 1 315 111 M315 111 A95 39 0 0 1 246 148 M194 148 A95 39 0 0 1 125 111"/>
+              </g>
+              <ellipse cx="220" cy="111" rx="51" ry="20" stroke="#5b7fa3" stroke-width="1.6"/>
+              <path d="M203 92.2 L211 93.5 L206 99" stroke="#5b7fa3" stroke-width="1.35" stroke-linejoin="round"/>
+              <circle cx="169" cy="111" r="6.5" fill="#244369" stroke="#fff" stroke-width="2.5"/>
+              <circle cx="271" cy="111" r="6.5" fill="#6285a7" stroke="#fff" stroke-width="2.5"/>
+            </g>
+            <path d="M332 78 L349 65" stroke="#9eb5c9" stroke-width="1.1" stroke-linecap="round"/>
+            <circle cx="332" cy="78" r="2.5" fill="#6285a7"/>
+            <text x="355" y="66" class="graphic-label">CFT</text>
+            <text x="220" y="219" text-anchor="middle" class="graphic-math">E ↔ Δ</text>
+          </svg>
           <div class="research-number" aria-hidden="true">01</div>
           <h3>Post-Newtonian dynamics in (A)dS and dual CFT data</h3>
           <p>How does AdS/CFT dictionary work for the most familiar gravitational system: two massive bodies bound by a nearly Newtonian potential? In this project we study the post-Newtonian dynamics of an inspiralling binary in Anti de-Sitter/de-Sitter background. We also extract information about the dual boundary field theory (CFT). In dS, this analysis gives us cosmological curvature corrections to gravitational-wave data.</p>
@@ -226,6 +259,28 @@
           </ul>
         </article>
         <article class="research-item">
+          <!-- Self-contained vector illustration: soft emission from an external scattering leg. -->
+          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" fill="none" role="img" aria-labelledby="soft-graphic-title soft-graphic-description" focusable="false">
+            <title id="soft-graphic-title">Scattering and soft radiation</title>
+            <desc id="soft-graphic-description">A hard scattering amplitude joins two incoming and two outgoing particle lines. A wavy gauge-boson line is emitted from an outgoing leg, with its frequency tending to zero in the soft limit.</desc>
+            <g stroke="#617f9d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M82 65 L171 114 M82 187 L171 138 M213 114 L310 57 M213 138 L310 195"/>
+              <path d="M121 82 L131 92 L117 90 M117 160 L131 160 L121 170 M272 73 L284 72 L279 84 M275 169 L286 181 L272 178"/>
+            </g>
+            <circle cx="192" cy="126" r="24" fill="#f4f8fb" stroke="#9eb5c9" stroke-width="1.3"/>
+            <text x="192" y="133" text-anchor="middle" class="graphic-math" style="font-size: 23px; fill: #244369;">M</text>
+            <g transform="rotate(-15 255 89.3)" stroke="#244369" stroke-width="1.7" stroke-linecap="round">
+              <path d="M255 89.3 Q263 78.3 271 89.3 Q279 100.3 287 89.3 Q295 78.3 303 89.3 Q311 100.3 319 89.3 Q327 78.3 335 89.3 Q343 100.3 351 89.3 Q359 78.3 367 89.3"/>
+            </g>
+            <circle cx="255" cy="89.3" r="2.8" fill="#244369"/>
+            <text x="322" y="41" text-anchor="middle" class="graphic-math">ω → 0</text>
+            <g fill="#9eb5c9">
+              <circle cx="82" cy="65" r="2.3"/>
+              <circle cx="82" cy="187" r="2.3"/>
+              <circle cx="310" cy="57" r="2.3"/>
+              <circle cx="310" cy="195" r="2.3"/>
+            </g>
+          </svg>
           <div class="research-number" aria-hidden="true">02</div>
           <h3>Soft theorems and gauge invariance</h3>
           <p>Soft theorems describe infrared properties of gauge theories. How do they get modified when the gauge invariance is non-trivial: as in the case of Chern–Simons gauge theories? We studied soft theorems for gauge theories with Chern-Simons perturbations in both flat and curved (de Sitter) background.</p>
