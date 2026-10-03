@@ -20,6 +20,10 @@
       --blue-hover: #173352;
       --line: #dce3e9;
       --pale: #f3f7fb;
+      --teal: #346967;
+      --teal-hover: #285552;
+      --plum: #805d79;
+      --clay: #946744;
       --serif: Georgia, "Times New Roman", serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
@@ -38,24 +42,24 @@
     .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, .97); border-bottom: 1px solid var(--line); }
     .header-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
     .brand { color: var(--ink); font-family: var(--serif); font-size: 23px; font-weight: 400; text-decoration: none; white-space: nowrap; }
-    .brand::after { content: "."; color: #477aa7; }
+    .brand::after { content: "."; color: var(--clay); }
     nav { display: flex; align-items: center; gap: 30px; }
     nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; padding-block: 10px; }
-    nav a:hover { color: var(--blue); text-decoration: underline; }
+    nav a:hover { color: var(--teal); text-decoration: underline; }
     .hero { padding-block: 64px 60px; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 72px; align-items: center; }
     h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(48px, 6.2vw, 78px); line-height: 1.08; letter-spacing: -.045em; }
-    .hero-role { color: var(--muted); font-size: 18px; margin-top: 20px; }
+    .hero-role { color: var(--teal); font-size: 18px; margin-top: 20px; }
     .hero-emails { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 22px; }
     .hero-emails a { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
-    .email-icon { width: 18px; height: 18px; flex: none; }
+    .email-icon { width: 18px; height: 18px; flex: none; color: var(--teal); }
     .hero-emails span { min-width: 0; }
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 24px; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 10px 22px; border: 1px solid var(--line); border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .18s ease, border-color .18s ease; }
-    .button-primary { color: #fff; background: var(--blue); border-color: var(--blue); }
-    .button-primary:hover { color: #fff; background: var(--blue-hover); border-color: var(--blue-hover); }
+    .button-primary { color: #fff; background: var(--teal); border-color: var(--teal); }
+    .button-primary:hover { color: #fff; background: var(--teal-hover); border-color: var(--teal-hover); }
     .profile-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
     .profile-links a { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; color: var(--blue); font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
-    .profile-links a:hover { background: var(--pale); border-color: #bacbda; }
+    .profile-links a:hover { background: #f3f8f5; border-color: #b4cbc3; color: var(--teal); }
     .hero-aside { width: 100%; justify-self: end; }
     .portrait-frame { position: relative; width: 100%; max-width: 320px; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--line); border-radius: 5px; background: var(--pale); }
     /* Wider display crop: source rectangle x=150, y=278, w=936, h=1170.
@@ -65,21 +69,20 @@
     .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
     h2 { font-family: var(--serif); font-size: 38px; line-height: 1.2; font-weight: 400; letter-spacing: -.025em; }
     .section-note { font-size: 14px; color: var(--muted); }
-    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 5px; }
-    .research-item { padding: 32px 34px 34px; }
+    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+    .research-item { --research-accent: var(--teal); --research-wash: #f7faf8; padding: 32px 34px 34px; background: linear-gradient(180deg, var(--research-wash), #fff 310px); }
+    .research-item:nth-child(2) { --research-accent: var(--plum); --research-wash: #fcf9fb; }
     .research-item + .research-item { border-left: 1px solid var(--line); }
-    .research-graphic { display: block; width: 100%; max-width: 400px; height: auto; margin: 0 auto 27px; overflow: visible; }
-    .research-graphic text { font-family: var(--sans); }
-    .research-graphic .graphic-label { fill: #617b93; font-size: 12px; letter-spacing: .08em; }
-    .research-graphic .graphic-math { fill: #526f8b; font-family: var(--serif); font-size: 17px; font-style: italic; }
-    .research-number { color: #5d7b98; font-family: var(--serif); font-size: 15px; }
+    .research-graphic { display: block; width: 100%; max-width: 410px; height: auto; margin: 0 auto 23px; overflow: visible; }
+    .research-number { display: flex; align-items: center; gap: 12px; color: var(--research-accent); font-family: var(--serif); font-size: 15px; }
+    .research-number::after { content: ""; width: 30px; height: 1px; background: currentColor; opacity: .45; }
     h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.3; letter-spacing: -.012em; }
     .research-item h3 { margin-top: 15px; max-width: 360px; }
     .research-item > p { margin-top: 17px; color: var(--muted); font-size: 16px; line-height: 1.8; }
-    .direction-label { margin-top: 26px; font-size: 12px; color: var(--blue); font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+    .direction-label { margin-top: 26px; font-size: 12px; color: var(--research-accent); font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
     .directions { list-style: none; padding: 0; margin: 10px 0 0; }
     .directions li { position: relative; padding-left: 16px; margin-top: 8px; font-size: 14px; line-height: 1.7; }
-    .directions li::before { content: ""; position: absolute; left: 0; top: .75em; width: 5px; height: 5px; border-radius: 50%; background: #5f819f; }
+    .directions li::before { content: ""; position: absolute; left: 0; top: .75em; width: 5px; height: 5px; border-radius: 50%; background: var(--research-accent); opacity: .8; }
     .about-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 88px; }
     .about-text { max-width: 850px; }
     .about-text p + p { margin-top: 18px; }
@@ -87,7 +90,7 @@
     .academic-details { margin: 0; }
     .academic-details > div { padding: 17px 0; border-bottom: 1px solid var(--line); }
     .academic-details > div:first-child { padding-top: 0; }
-    .academic-details dt { color: var(--muted); font-size: 12px; margin-bottom: 5px; }
+    .academic-details dt { color: var(--clay); font-size: 12px; margin-bottom: 5px; }
     .academic-details dd { margin: 0; font-size: 15px; }
     .thesis-link { display: block; width: fit-content; margin-top: 7px; font-size: 14px; }
     .site-footer { padding-block: 0 28px; }
@@ -219,34 +222,44 @@
       </div>
       <div class="research-grid">
         <article class="research-item">
-          <!-- Self-contained vector illustration: a binary in the AdS bulk and its CFT boundary. -->
-          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" fill="none" role="img" aria-labelledby="binary-graphic-title binary-graphic-description" focusable="false">
-            <title id="binary-graphic-title">Binary dynamics and holography</title>
-            <desc id="binary-graphic-description">Two bodies orbit in a schematic AdS cylinder. Gentle wavefronts extend towards its boundary, labelled CFT, with the bulk energy and boundary scaling dimension linked below.</desc>
-            <g stroke="#cedbe6" stroke-width="1.2" stroke-linecap="round">
-              <path d="M108 166 C108 152.7 158.1 142 220 142 C281.9 142 332 152.7 332 166" stroke-dasharray="3 6"/>
-              <path d="M164 22 C151 67 151 139 164 187"/>
-              <path d="M276 22 C289 67 289 139 276 187"/>
-            </g>
-            <g stroke="#9eb5c9" stroke-width="1.35">
-              <ellipse cx="220" cy="43" rx="112" ry="24"/>
-              <path d="M108 43 V166 C108 179.3 158.1 190 220 190 C281.9 190 332 179.3 332 166 V43"/>
-            </g>
-            <g transform="rotate(-17 220 111)" stroke-linecap="round">
-              <g stroke="#c6d6e4" stroke-width="1.2">
-                <path d="M144 111 A76 30 0 0 1 202 82 M238 82 A76 30 0 0 1 296 111 M296 111 A76 30 0 0 1 238 140 M202 140 A76 30 0 0 1 144 111"/>
-                <path d="M125 111 A95 39 0 0 1 194 74 M246 74 A95 39 0 0 1 315 111 M315 111 A95 39 0 0 1 246 148 M194 148 A95 39 0 0 1 125 111"/>
-              </g>
-              <ellipse cx="220" cy="111" rx="51" ry="20" stroke="#5b7fa3" stroke-width="1.6"/>
-              <path d="M203 92.2 L211 93.5 L206 99" stroke="#5b7fa3" stroke-width="1.35" stroke-linejoin="round"/>
-              <circle cx="169" cy="111" r="6.5" fill="#244369" stroke="#fff" stroke-width="2.5"/>
-              <circle cx="271" cy="111" r="6.5" fill="#6285a7" stroke="#fff" stroke-width="2.5"/>
-            </g>
-            <path d="M332 78 L349 65" stroke="#9eb5c9" stroke-width="1.1" stroke-linecap="round"/>
-            <circle cx="332" cy="78" r="2.5" fill="#6285a7"/>
-            <text x="355" y="66" class="graphic-label">CFT</text>
-            <text x="220" y="219" text-anchor="middle" class="graphic-math">E ↔ Δ</text>
-          </svg>
+          <!-- Self-contained vector illustration: binary motion in an AdS harmonic well. -->
+          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" fill="none" role="img" aria-labelledby="binary-graphic-title binary-graphic-description" focusable="false">
+  <title id="binary-graphic-title">A binary in an AdS harmonic well</title>
+  <desc id="binary-graphic-description">A softly shaded parabolic potential well represents harmonic confinement in the non-relativistic AdS limit. Two bodies, in teal and terracotta, share an orbit near its minimum.</desc>
+  <defs>
+    <linearGradient id="ads-well-surface" x1="220" y1="35" x2="220" y2="199" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f9fcfa"/>
+      <stop offset="1" stop-color="#e7f1ed"/>
+    </linearGradient>
+    <radialGradient id="ads-teal-body" cx=".3" cy=".25" r=".8">
+      <stop stop-color="#61938c"/>
+      <stop offset="1" stop-color="#2f6360"/>
+    </radialGradient>
+    <radialGradient id="ads-clay-body" cx=".3" cy=".25" r=".8">
+      <stop stop-color="#dfa787"/>
+      <stop offset="1" stop-color="#b97855"/>
+    </radialGradient>
+  </defs>
+  <path d="M76 80 C76 53.76 140.47 32.48 220 32.48 C299.53 32.48 364 53.76 364 80 Q220 310 76 80Z" fill="url(#ads-well-surface)"/>
+  <g stroke="#a6c3ba" stroke-width="1.1" stroke-linecap="round">
+    <ellipse cx="220" cy="113.61" rx="120" ry="39.6" opacity=".6"/>
+    <ellipse cx="220" cy="142.12" rx="95" ry="31.35" opacity=".6"/>
+    <path d="M102.04 52.74 Q220 300 337.96 107.26 M102.04 107.26 Q220 300 337.96 52.74" opacity=".56"/>
+  </g>
+  <path d="M76 80 C76 53.76 140.47 32.48 220 32.48 C299.53 32.48 364 53.76 364 80" stroke="#97b9af" stroke-width="1.3"/>
+  <path d="M76 80 Q220 310 364 80" stroke="#7fa89d" stroke-width="1.4"/>
+  <path d="M76 80 C76 106.24 140.47 127.52 220 127.52 C299.53 127.52 364 106.24 364 80" stroke="#83ada0" stroke-width="1.3"/>
+  <g transform="translate(0 -14)">
+  <path d="M165 173.95 C165 163.93 189.62 155.8 220 155.8 C250.38 155.8 275 163.93 275 173.95" stroke="#386f68" stroke-width="1.5" stroke-dasharray="3 4" opacity=".62"/>
+  <path d="M275 173.95 C275 183.97 250.38 192.1 220 192.1 C189.62 192.1 165 183.97 165 173.95" stroke="#386f68" stroke-width="1.65"/>
+  <path d="m207.2 190.4 5.9-2.5-.8 5.1Z" fill="#386f68"/>
+  <circle cx="168.32" cy="167.74" r="8.7" fill="#fff"/>
+  <circle cx="168.32" cy="167.74" r="6.7" fill="url(#ads-teal-body)"/>
+  <circle cx="271.68" cy="180.16" r="8.7" fill="#fff"/>
+  <circle cx="271.68" cy="180.16" r="6.7" fill="url(#ads-clay-body)"/>
+  </g>
+  <text x="220" y="234" text-anchor="middle" fill="#436e64" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic">V ∝ r²</text>
+</svg>
           <div class="research-number" aria-hidden="true">01</div>
           <h3>Post-Newtonian dynamics in (A)dS and dual CFT data</h3>
           <p>How does AdS/CFT dictionary work for the most familiar gravitational system: two massive bodies bound by a nearly Newtonian potential? In this project we study the post-Newtonian dynamics of an inspiralling binary in Anti de-Sitter/de-Sitter background. We also extract information about the dual boundary field theory (CFT). In dS, this analysis gives us cosmological curvature corrections to gravitational-wave data.</p>
@@ -260,27 +273,24 @@
         </article>
         <article class="research-item">
           <!-- Self-contained vector illustration: soft emission from an external scattering leg. -->
-          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230" fill="none" role="img" aria-labelledby="soft-graphic-title soft-graphic-description" focusable="false">
-            <title id="soft-graphic-title">Scattering and soft radiation</title>
-            <desc id="soft-graphic-description">A hard scattering amplitude joins two incoming and two outgoing particle lines. A wavy gauge-boson line is emitted from an outgoing leg, with its frequency tending to zero in the soft limit.</desc>
-            <g stroke="#617f9d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M82 65 L171 114 M82 187 L171 138 M213 114 L310 57 M213 138 L310 195"/>
-              <path d="M121 82 L131 92 L117 90 M117 160 L131 160 L121 170 M272 73 L284 72 L279 84 M275 169 L286 181 L272 178"/>
-            </g>
-            <circle cx="192" cy="126" r="24" fill="#f4f8fb" stroke="#9eb5c9" stroke-width="1.3"/>
-            <text x="192" y="133" text-anchor="middle" class="graphic-math" style="font-size: 23px; fill: #244369;">M</text>
-            <g transform="rotate(-15 255 89.3)" stroke="#244369" stroke-width="1.7" stroke-linecap="round">
-              <path d="M255 89.3 Q263 78.3 271 89.3 Q279 100.3 287 89.3 Q295 78.3 303 89.3 Q311 100.3 319 89.3 Q327 78.3 335 89.3 Q343 100.3 351 89.3 Q359 78.3 367 89.3"/>
-            </g>
-            <circle cx="255" cy="89.3" r="2.8" fill="#244369"/>
-            <text x="322" y="41" text-anchor="middle" class="graphic-math">ω → 0</text>
-            <g fill="#9eb5c9">
-              <circle cx="82" cy="65" r="2.3"/>
-              <circle cx="82" cy="187" r="2.3"/>
-              <circle cx="310" cy="57" r="2.3"/>
-              <circle cx="310" cy="195" r="2.3"/>
-            </g>
-          </svg>
+          <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" fill="none" role="img" aria-labelledby="soft-graphic-title soft-graphic-description" focusable="false">
+  <title id="soft-graphic-title">Scattering and the soft limit</title>
+  <desc id="soft-graphic-description">Four plum particle lines meet a hard scattering amplitude. A gold wavy gauge-boson line branches from an outgoing particle, with its frequency tending to zero.</desc>
+  <g stroke="#97788f" stroke-width="1.65" stroke-linecap="round">
+    <path d="M73 68 L169 122 M73 198 L169 144 M213 122 L349 74 M213 144 L349 198"/>
+  </g>
+  <g fill="#86657e">
+    <polygon points="132.31,101.36 126.96,95.37 124.41,99.90"/>
+    <polygon points="132.31,164.64 124.41,166.10 126.96,170.63"/>
+    <polygon points="316.58,85.44 308.55,85.52 310.28,90.42"/>
+    <polygon points="302.53,179.55 296.43,174.33 294.51,179.16"/>
+  </g>
+  <circle cx="191" cy="133" r="24.7" fill="#f9f4f8" stroke="#b59bae" stroke-width="1.3"/>
+  <text x="191" y="141" text-anchor="middle" fill="#75536e" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-style="italic">M</text>
+  <path d="M269.00 102.24 L269.92 101.99 L270.82 101.73 L271.69 101.45 L272.52 101.15 L273.30 100.82 L274.02 100.46 L274.66 100.05 L275.22 99.59 L275.70 99.08 L276.09 98.52 L276.38 97.91 L276.59 97.25 L276.71 96.54 L276.75 95.77 L276.72 94.97 L276.62 94.13 L276.47 93.26 L276.28 92.36 L276.07 91.45 L275.83 90.53 L275.60 89.61 L275.38 88.70 L275.19 87.80 L275.04 86.93 L274.95 86.09 L274.91 85.28 L274.95 84.52 L275.08 83.81 L275.28 83.15 L275.58 82.53 L275.97 81.97 L276.44 81.47 L277.00 81.01 L277.65 80.60 L278.36 80.23 L279.14 79.91 L279.98 79.61 L280.85 79.33 L281.75 79.07 L282.67 78.82 L283.58 78.57 L284.48 78.32 L285.36 78.04 L286.19 77.74 L286.97 77.41 L287.69 77.05 L288.33 76.64 L288.89 76.18 L289.37 75.67 L289.75 75.11 L290.05 74.50 L290.26 73.84 L290.38 73.12 L290.42 72.36 L290.39 71.56 L290.29 70.72 L290.14 69.85 L289.95 68.95 L289.73 68.04 L289.50 67.12 L289.27 66.20 L289.05 65.28 L288.86 64.39 L288.71 63.52 L288.61 62.68 L288.58 61.87 L288.62 61.11 L288.74 60.40 L288.95 59.73 L289.25 59.12 L289.63 58.56 L290.11 58.06 L290.67 57.60 L291.31 57.19 L292.03 56.82 L292.81 56.49 L293.64 56.19 L294.52 55.92 L295.42 55.66 L296.33 55.41 L297.25 55.16 L298.15 54.90 L299.02 54.63 L299.86 54.33 L300.64 54.00 L301.35 53.63 L302.00 53.22 L302.56 52.77 L303.03 52.26 L303.42 51.70 L303.72 51.09 L303.92 50.43 L304.05 49.71 L304.09 48.95 L304.05 48.15 L303.96 47.31 L303.81 46.43 L303.62 45.54 L303.40 44.63 L303.17 43.71 L302.93 42.79 L302.72 41.87 L302.53 40.98 L302.38 40.11 L302.28 39.26 L302.25 38.46 L302.29 37.70 L302.41 36.99 L302.62 36.32 L302.91 35.71 L303.30 35.15 L303.78 34.64 L304.34 34.19 L304.98 33.78 L305.70 33.41 L306.48 33.08 L307.31 32.78 L308.18 32.51 L309.08 32.25 L310.00 32.00" stroke="#bb8847" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="269" cy="102.24" r="2.7" fill="#aa7942"/>
+  <text x="322" y="37" fill="#956b37" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic">ω → 0</text>
+</svg>
           <div class="research-number" aria-hidden="true">02</div>
           <h3>Soft theorems and gauge invariance</h3>
           <p>Soft theorems describe infrared properties of gauge theories. How do they get modified when the gauge invariance is non-trivial: as in the case of Chern–Simons gauge theories? We studied soft theorems for gauge theories with Chern-Simons perturbations in both flat and curved (de Sitter) background.</p>
