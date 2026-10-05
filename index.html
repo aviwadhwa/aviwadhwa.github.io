@@ -400,13 +400,15 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
         if (hoverPointer.matches && event.pointerType !== 'touch' &&
             !menu.contains(document.activeElement)) menu.open = false;
       });
-      menu.addEventListener('focusout', () => {
-        queueMicrotask(() => {
-          const stillHovered = hoverPointer.matches && menu.matches(':hover');
-          if (!menu.contains(document.activeElement) && !stillHovered) menu.open = false;
-        });
-      });
       menu.addEventListener('keydown', (event) => {
+        // Close after keyboard navigation, never on blur during a link tap.
+        // Touch browsers can blur the summary before dispatching the link click.
+        if (event.key === 'Tab') {
+          requestAnimationFrame(() => {
+            const stillHovered = hoverPointer.matches && menu.matches(':hover');
+            if (!menu.contains(document.activeElement) && !stillHovered) menu.open = false;
+          });
+        }
         if (event.key === 'Escape' && menu.open) {
           event.preventDefault();
           menu.open = false;
