@@ -291,10 +291,10 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
       </div>
       <div class="research-grid">
         <article class="research-item">
-          <!-- Self-contained vector illustration: binary motion in an AdS harmonic well. -->
+          <!-- Self-contained vector illustration: AdS cylinder and its nonrelativistic harmonic well. -->
           <svg class="research-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" fill="none" role="img" aria-labelledby="binary-graphic-title binary-graphic-description" focusable="false">
-  <title id="binary-graphic-title">A binary in an AdS harmonic well and its CFT boundary</title>
-  <desc id="binary-graphic-description">Two bodies orbit inside a softly shaded AdS harmonic well. A distinct plum ring surrounds its upper edge and marks the CFT boundary.</desc>
+  <title id="binary-graphic-title">An AdS binary and its nonrelativistic harmonic well</title>
+  <desc id="binary-graphic-description">Two winding particle trajectories lie inside a softly shaded AdS cylinder on the left. A plum CFT label points to the cylindrical boundary. A right-pointing arrow labelled NR limit leads to the original harmonic well and orbiting binary on the right.</desc>
   <defs>
     <linearGradient id="ads-well-surface" x1="220" y1="35" x2="220" y2="199" gradientUnits="userSpaceOnUse">
       <stop stop-color="#f9fcfa"/>
@@ -308,36 +308,73 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
       <stop stop-color="#dfa787"/>
       <stop offset="1" stop-color="#b97855"/>
     </radialGradient>
+  
+    <linearGradient id="ads-cylinder-surface" x1="28" y1="131" x2="146" y2="131" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fbf8fb"/>
+      <stop offset=".55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f5f0f5"/>
+    </linearGradient>
   </defs>
-  <path d="M52 80 C52 49.38 127.22 24.56 220 24.56 C312.78 24.56 388 49.38 388 80" stroke="#a48a9c" stroke-width="1.3" stroke-dasharray="4 4.5" stroke-linecap="round"/>
+
+  <!-- AdS cylinder and two projected particle worldlines. -->
+  <path d="M28 51 C28 41.06 54.42 33 87 33 C119.58 33 146 41.06 146 51 V211 C146 220.94 119.58 229 87 229 C54.42 229 28 220.94 28 211Z" fill="url(#ads-cylinder-surface)"/>
+  <g stroke="#a48a9c" stroke-width="1.3" stroke-linecap="round">
+    <path d="M28 51 C28 41.06 54.42 33 87 33 C119.58 33 146 41.06 146 51" stroke-dasharray="3.5 4"/>
+    <path d="M28 211 C28 201.06 54.42 193 87 193 C119.58 193 146 201.06 146 211" stroke-dasharray="3.5 4" opacity=".72"/>
+    <path d="M28 51 V211 M146 51 V211"/>
+  </g>
+  <g stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M99.22 215.00 L101.71 212.97 L103.97 210.95 L105.96 208.93 L107.66 206.90 L109.03 204.88 L110.05 202.85 L110.70 200.82 L110.99 198.80 L110.89 196.78 L110.42 194.75 L109.58 192.72 L108.38 190.70 L106.85 188.68 L105.00 186.65 L102.87 184.62 L100.49 182.60 L97.90 180.57 L95.13 178.55 L92.24 176.53 L89.26 174.50 L86.25 172.47 L83.25 170.45 L80.30 168.43 L77.47 166.40 L74.78 164.38 L72.29 162.35 L70.03 160.32 L68.04 158.30 L66.34 156.28 L64.97 154.25 L63.95 152.22 L63.30 150.20 L63.01 148.18 L63.11 146.15 L63.58 144.12 L64.42 142.10 L65.62 140.07 L67.15 138.05 L69.00 136.03 L71.13 134.00 L73.51 131.98 L76.10 129.95 L78.87 127.92 L81.76 125.90 L84.74 123.88 L87.75 121.85 L90.75 119.83 L93.70 117.80 L96.53 115.77 L99.22 113.75 L101.71 111.73 L103.97 109.70 L105.96 107.67 L107.66 105.65 L109.03 103.62 L110.05 101.60 L110.70 99.58 L110.99 97.55 L110.89 95.52 L110.42 93.50 L109.58 91.48 L108.38 89.45 L106.85 87.42 L105.00 85.40 L102.87 83.38 L100.49 81.35 L97.90 79.32 L95.13 77.30 L92.24 75.28 L89.26 73.25 L86.25 71.22 L83.25 69.20 L80.30 67.18 L77.47 65.15 L74.78 63.12 L72.29 61.10 L70.03 59.07 L68.04 57.05 L66.34 55.03 L64.97 53.00" stroke="#386f68" opacity=".92"/>
+    <path d="M74.78 215.00 L72.29 212.97 L70.03 210.95 L68.04 208.93 L66.34 206.90 L64.97 204.88 L63.95 202.85 L63.30 200.82 L63.01 198.80 L63.11 196.78 L63.58 194.75 L64.42 192.72 L65.62 190.70 L67.15 188.68 L69.00 186.65 L71.13 184.62 L73.51 182.60 L76.10 180.57 L78.87 178.55 L81.76 176.53 L84.74 174.50 L87.75 172.47 L90.75 170.45 L93.70 168.43 L96.53 166.40 L99.22 164.38 L101.71 162.35 L103.97 160.32 L105.96 158.30 L107.66 156.28 L109.03 154.25 L110.05 152.22 L110.70 150.20 L110.99 148.18 L110.89 146.15 L110.42 144.12 L109.58 142.10 L108.38 140.07 L106.85 138.05 L105.00 136.03 L102.87 134.00 L100.49 131.98 L97.90 129.95 L95.13 127.92 L92.24 125.90 L89.26 123.88 L86.25 121.85 L83.25 119.83 L80.30 117.80 L77.47 115.77 L74.78 113.75 L72.29 111.73 L70.03 109.70 L68.04 107.67 L66.34 105.65 L64.97 103.62 L63.95 101.60 L63.30 99.58 L63.01 97.55 L63.11 95.52 L63.58 93.50 L64.42 91.48 L65.62 89.45 L67.15 87.42 L69.00 85.40 L71.13 83.38 L73.51 81.35 L76.10 79.32 L78.87 77.30 L81.76 75.28 L84.74 73.25 L87.75 71.22 L90.75 69.20 L93.70 67.18 L96.53 65.15 L99.22 63.12 L101.71 61.10 L103.97 59.07 L105.96 57.05 L107.66 55.03 L109.03 53.00" stroke="#b97855" opacity=".92"/>
+  </g>
+  <g stroke="#a48a9c" stroke-width="1.3" stroke-linecap="round">
+    <path d="M28 51 C28 60.94 54.42 69 87 69 C119.58 69 146 60.94 146 51"/>
+    <path d="M28 211 C28 220.94 54.42 229 87 229 C119.58 229 146 220.94 146 211"/>
+  </g>
+  <circle cx="63.30" cy="150.20" r="5.3" fill="#fff"/>
+  <circle cx="63.30" cy="150.20" r="3.8" fill="url(#ads-teal-body)"/>
+  <circle cx="110.70" cy="150.20" r="5.3" fill="#fff"/>
+  <circle cx="110.70" cy="150.20" r="3.8" fill="url(#ads-clay-body)"/>
+
+  <!-- The CFT callout belongs to the cylinder boundary. -->
+  <path d="M132.2 39.44 L121 26" stroke="#a48a9c" stroke-width="1.3" stroke-linecap="round"/>
+  <circle cx="132.2" cy="39.44" r="2.2" fill="#92718b"/>
+  <text x="117" y="19" text-anchor="middle" fill="#805d79" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="1.2">CFT</text>
+
+  <!-- Nonrelativistic limit: label only, with no equation. -->
+  <text x="193" y="115" text-anchor="middle" fill="#526371" font-family="Arial, Helvetica, sans-serif" font-size="13.5">NR limit</text>
+  <path d="M163 132 H222" stroke="#647d7e" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="m219 128 7 4-7 4Z" fill="#647d7e"/>
+
+  <!-- Original bowl geometry, scaled uniformly. -->
+  <g transform="translate(209 70) scale(.56)">
+  <path d="M52 80 C52 49.38 127.22 24.56 220 24.56 C312.78 24.56 388 49.38 388 80" stroke="#a48a9c" stroke-width="2.3214" stroke-dasharray="4 4.5" stroke-linecap="round"/>
   <path d="M76 80 C76 53.76 140.47 32.48 220 32.48 C299.53 32.48 364 53.76 364 80 Q220 310 76 80Z" fill="url(#ads-well-surface)"/>
-  <g stroke="#a6c3ba" stroke-width="1.1" stroke-linecap="round">
+  <g stroke="#a6c3ba" stroke-width="1.9643" stroke-linecap="round">
     <ellipse cx="220" cy="113.61" rx="120" ry="39.6" opacity=".6"/>
     <ellipse cx="220" cy="142.12" rx="95" ry="31.35" opacity=".6"/>
     <path d="M102.04 52.74 Q220 300 337.96 107.26 M102.04 107.26 Q220 300 337.96 52.74" opacity=".56"/>
   </g>
-  <path d="M76 80 C76 53.76 140.47 32.48 220 32.48 C299.53 32.48 364 53.76 364 80" stroke="#97b9af" stroke-width="1.3"/>
-  <path d="M76 80 Q220 310 364 80" stroke="#7fa89d" stroke-width="1.4"/>
-  <path d="M76 80 C76 106.24 140.47 127.52 220 127.52 C299.53 127.52 364 106.24 364 80" stroke="#83ada0" stroke-width="1.3"/>
+  <path d="M76 80 C76 53.76 140.47 32.48 220 32.48 C299.53 32.48 364 53.76 364 80" stroke="#97b9af" stroke-width="2.3214"/>
+  <path d="M76 80 Q220 310 364 80" stroke="#7fa89d" stroke-width="2.5000"/>
+  <path d="M76 80 C76 106.24 140.47 127.52 220 127.52 C299.53 127.52 364 106.24 364 80" stroke="#83ada0" stroke-width="2.3214"/>
   <g transform="translate(0 -14)">
-  <path d="M165 173.95 C165 163.93 189.62 155.8 220 155.8 C250.38 155.8 275 163.93 275 173.95" stroke="#386f68" stroke-width="1.5" stroke-dasharray="3 4" opacity=".62"/>
-  <path d="M275 173.95 C275 183.97 250.38 192.1 220 192.1 C189.62 192.1 165 183.97 165 173.95" stroke="#386f68" stroke-width="1.65"/>
+  <path d="M165 173.95 C165 163.93 189.62 155.8 220 155.8 C250.38 155.8 275 163.93 275 173.95" stroke="#386f68" stroke-width="2.6786" stroke-dasharray="3 4" opacity=".62"/>
+  <path d="M275 173.95 C275 183.97 250.38 192.1 220 192.1 C189.62 192.1 165 183.97 165 173.95" stroke="#386f68" stroke-width="2.9464"/>
   <path d="m207.2 190.4 5.9-2.5-.8 5.1Z" fill="#386f68"/>
   <circle cx="168.32" cy="167.74" r="8.7" fill="#fff"/>
   <circle cx="168.32" cy="167.74" r="6.7" fill="url(#ads-teal-body)"/>
   <circle cx="271.68" cy="180.16" r="8.7" fill="#fff"/>
   <circle cx="271.68" cy="180.16" r="6.7" fill="url(#ads-clay-body)"/>
   </g>
-  <g stroke="#a48a9c" stroke-width="1.3" stroke-linecap="round">
+  <g stroke="#a48a9c" stroke-width="2.3214" stroke-linecap="round">
     <path d="M52 80 C52 110.62 127.22 135.44 220 135.44 C312.78 135.44 388 110.62 388 80"/>
-    <path d="M365.49 52.28 L376 40"/>
   </g>
-  <circle cx="365.49" cy="52.28" r="2.4" fill="#92718b"/>
-  <text x="377" y="33" fill="#805d79" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="1.2">CFT</text>
+  </g>
 </svg>
           <div class="research-number" aria-hidden="true">01</div>
           <h3>Post-Newtonian dynamics in (A)dS and dual CFT data</h3>
-          <p>How does AdS/CFT dictionary work for the most familiar gravitational system: two massive bodies bound by a nearly Newtonian potential? In this project we study the post-Newtonian dynamics of an inspiralling binary in anti-de Sitter/de Sitter background. We also extract information about the dual boundary field theory (CFT). In dS, this analysis gives us cosmological curvature corrections to gravitational-wave data.</p>
+          <p>How does AdS/CFT dictionary work for the most familiar gravitational system: two massive bodies bound by a nearly Newtonian potential? In this project we study the post-Newtonian dynamics of an inspiralling binary in Anti de-Sitter/de-Sitter background. We also extract information about the dual boundary field theory (CFT). In dS, this analysis gives us cosmological curvature corrections to gravitational-wave data.</p>
           <div class="direction-label">Current directions</div>
           <ul class="directions">
             <li>Conservative dynamics and conserved charges through 2PN.</li>
