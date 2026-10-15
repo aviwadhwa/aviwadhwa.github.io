@@ -89,10 +89,17 @@
     h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.3; letter-spacing: -.012em; }
     .research-item h3 { margin-top: 15px; max-width: 360px; }
     .research-item > p { margin-top: 17px; color: var(--muted); font-size: 16px; line-height: 1.8; }
-    .direction-label { margin-top: 26px; font-size: 12px; color: var(--research-accent); font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
-    .directions { list-style: none; padding: 0; margin: 10px 0 0; }
-    .directions li { position: relative; padding-left: 16px; margin-top: 8px; font-size: 14px; line-height: 1.7; }
-    .directions li::before { content: ""; position: absolute; left: 0; top: .75em; width: 5px; height: 5px; border-radius: 50%; background: var(--research-accent); opacity: .8; }
+    .publication-label { margin: 26px 0 10px; font-size: 12px; color: var(--research-accent); font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+    .publications { list-style: none; padding: 0; margin: 0; }
+    .publications li { border-top: 1px solid var(--line); }
+    .publication-link { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 4px; padding: 13px 0; color: var(--research-accent); text-decoration: none; }
+    .publication-title { min-width: 0; font-size: 14px; font-weight: 500; line-height: 1.5; }
+    .publication-arrow { font-size: 16px; line-height: 1.3; opacity: .65; }
+    .publication-meta { grid-column: 1 / -1; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .publication-ref { white-space: nowrap; }
+    .publication-link:hover, .publication-link:focus-visible { color: var(--research-accent); }
+    .publication-link:hover .publication-title, .publication-link:focus-visible .publication-title { text-decoration: underline; text-underline-offset: 3px; }
+    .publication-link:hover .publication-arrow, .publication-link:focus-visible .publication-arrow { opacity: 1; }
     .about-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 88px; }
     .about-text { max-width: 850px; }
     .about-text p + p { margin-top: 18px; }
@@ -375,12 +382,16 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
           <div class="research-number" aria-hidden="true">01</div>
           <h3>Post-Newtonian dynamics in (A)dS and dual CFT data</h3>
           <p>How does AdS/CFT dictionary work for the most familiar gravitational system: two massive bodies bound by a nearly Newtonian potential? In this project we study the post-Newtonian dynamics of an inspiralling binary in Anti de-Sitter/de-Sitter background. We also extract information about the dual boundary field theory (CFT). In dS, this analysis gives us cosmological curvature corrections to gravitational-wave data.</p>
-          <div class="direction-label">Current directions</div>
-          <ul class="directions">
-            <li>Conservative dynamics and conserved charges through 2PN.</li>
-            <li>Effective one-body dynamics and quasi-circular orbits.</li>
-            <li>CFT data from bulk energy spectrum and boundary waveform.</li>
-            <li>Gravitational radiation and radiation reaction in AdS</li>
+          <h4 class="publication-label" id="pn-publications">Relevant publications</h4>
+          <ul class="publications" role="list" aria-labelledby="pn-publications">
+            <li>
+              <a class="publication-link" href="https://arxiv.org/abs/2610.20589" target="_blank" rel="noopener noreferrer" title="Post-Newtonian theory in de Sitter and anti-de Sitter spacetimes">
+                <span class="publication-title">Post-Newtonian theory in (A)dS</span>
+                <span class="publication-arrow" aria-hidden="true">↗</span>
+                <span class="publication-meta">Loganayagam &amp; Wadhwa · <span class="publication-ref">arXiv:2610.20589</span></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
           </ul>
         </article>
         <article class="research-item">
@@ -406,12 +417,24 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
           <div class="research-number" aria-hidden="true">02</div>
           <h3>Soft theorems and gauge invariance</h3>
           <p>Soft theorems describe infrared properties of gauge theories. How do they get modified when the gauge invariance is non-trivial: as in the case of Chern–Simons gauge theories? We studied soft theorems for gauge theories with Chern-Simons perturbations in both flat and curved (de Sitter) background.</p>
-          <div class="direction-label">Current directions</div>
-          <ul class="directions">
-            <li>Soft theorems for Chern-Simons in flat spacetime</li>
-            <li>Loop corrections to tree-level Chern-Simons soft factors</li>
-            <li>Curvature corrections (or lack of) to Chern-Simons soft factors</li>
-            <li>Connections to asymptotic symmetries</li>
+          <h4 class="publication-label" id="soft-publications">Relevant publications</h4>
+          <ul class="publications" role="list" aria-labelledby="soft-publications">
+            <li>
+              <a class="publication-link" href="https://arxiv.org/abs/2605.05130" target="_blank" rel="noopener noreferrer" title="Subleading Chern-Simons soft factors in perturbative de Sitter">
+                <span class="publication-title">Chern–Simons soft factors in de Sitter</span>
+                <span class="publication-arrow" aria-hidden="true">↗</span>
+                <span class="publication-meta">Chattopadhyay &amp; Wadhwa · <span class="publication-ref">arXiv:2605.05130</span></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a class="publication-link" href="https://arxiv.org/abs/2509.02542" target="_blank" rel="noopener noreferrer" title="Soft Theorems in Chern-Simons Matter Theories">
+                <span class="publication-title">Soft theorems in Chern–Simons matter</span>
+                <span class="publication-arrow" aria-hidden="true">↗</span>
+                <span class="publication-meta">Wadhwa · <span class="publication-ref">PRD 113, 045017 (2026)</span></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
           </ul>
         </article>
       </div>
