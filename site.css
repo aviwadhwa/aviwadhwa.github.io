@@ -1,13 +1,13 @@
 @font-face {
   font-family: Manrope;
-  src: url('fonts/manrope.woff2') format('woff2');
+  src: url('manrope.woff2') format('woff2');
   font-style: normal;
   font-weight: 400 600;
   font-display: swap;
 }
 @font-face {
   font-family: Newsreader;
-  src: url('fonts/newsreader.woff2') format('woff2');
+  src: url('newsreader.woff2') format('woff2');
   font-style: normal;
   font-weight: 400 500;
   font-display: swap;
